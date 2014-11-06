@@ -4,11 +4,11 @@
 class Move
 {
 public:
-	Move(char piece, int move);
+	Move(char, int);
 	char getPiece();
-	int getMove();
+	int getLocation();
 
 private:
 	char piece;
-	int move;
+	int location;
 };

@@ -3,10 +3,8 @@
 
 //for access to Player class definition
 #include "stdafx.h"
-#include "player.h" 
+#include "Player.h" 
 
-#include <iostream>
-//for access to Board class definition
 #include "Board.h"  
 
 using namespace std;
@@ -27,14 +25,15 @@ char Player::GetPiece() const
 
 void Player::MakeMove(Board& aBoard) const
 {
-	int move;
+	int location;
 
 	do
 	{
 		cout << "Player " << GetPiece();
 		cout << ", where would you like to move? (0-8): ";
-		cin >> move;
-	} while (aBoard.IsLegalMove(move) == false);
+		cin >> location;
+	} while (aBoard.IsLegalMove(location) == false);
+	Move move(GetPiece(), location);
 	
-	aBoard.ReceiveMove(GetPiece(), move);
+	aBoard.ReceiveMove(move);
 }

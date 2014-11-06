@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Move.h"
 
-Move::Move(char piece, int move) : piece(piece), move(move)
+Move::Move(char piece, int location) : piece(piece), location(location)
 {
 
 }
@@ -10,7 +10,7 @@ char Move::getPiece()
 {
 	return piece;
 }
-int Move::getMove()
+int Move::getLocation()
 {
-	return move;
+	return location;
 }

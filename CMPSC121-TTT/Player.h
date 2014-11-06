@@ -2,9 +2,7 @@
 // Player definition - class represents a tic-tac-toe player
 
 #pragma once
-
-//forward declaration of Board class
-class Board;          
+#include "Board.h"
 
 class Player              
 {

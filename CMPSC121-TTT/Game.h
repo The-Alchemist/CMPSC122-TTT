@@ -1,10 +1,7 @@
 // Tic-Tac-Toe 2.0 - multiple files
 // Game definition - class represents a tic-tac-toe game
 
-//part of include guard - tests if PLAYER_H not defined
-#ifndef GAME_H   
-//part of include guard - defines PLAYER_H
-#define GAME_H   
+#pragma once
 
 //for access to Board class definition
 #include "Board.h"  
@@ -31,6 +28,4 @@ private:
     Player m_Players[NUM_PLAYERS];      
     int m_Current;                           
 };
-
-//part of include guard - ends #ifndef 
-#endif                           
+                        
